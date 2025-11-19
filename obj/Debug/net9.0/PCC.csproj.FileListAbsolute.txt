@@ -41,3 +41,4 @@ C:\Users\merehaw.zerie\PCC\obj\Debug\net9.0\PCC.pdb
 C:\Users\merehaw.zerie\PCC\obj\Debug\net9.0\PCC.genruntimeconfig.cache
 C:\Users\merehaw.zerie\PCC\obj\Debug\net9.0\ref\PCC.dll
 C:\Users\merehaw.zerie\PCC\obj\Debug\net9.0\compressed\u8syz43me9-589dfjgk33.gz
+C:\Users\merehaw.zerie\PCC\obj\Debug\net9.0\PCC.sourcelink.json
