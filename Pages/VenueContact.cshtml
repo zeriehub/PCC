@@ -1,0 +1,239 @@
+@page "/venue/contact"
+@model PCC.Pages.VenueContactModel
+@{
+    ViewData["Title"] = "Contact & Booking - Punjab Cultural Center";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/venue-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>Punjab Cultural Center</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/venue">Home</a></li>
+                <li><a href="/venue/about">About</a></li>
+                <li><a href="/venue/events">Events & Gallery</a></li>
+                <li><a href="/venue/availability">Check Availability</a></li>
+                <li><a href="/venue/contact" class="active">Contact & Booking</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact & Booking</h1>
+            <p>Let's start planning your perfect event</p>
+        </div>
+    </section>
+
+    <!-- Availability Check Banner -->
+    <section style="background: linear-gradient(135deg, var(--accent-color), var(--primary-color)); padding: 2rem 0; margin-bottom: 2rem;">
+        <div class="container" style="text-align: center; color: var(--white);">
+            <h3 style="margin-bottom: 1rem;">Check Venue Availability First</h3>
+            <p style="margin-bottom: 1.5rem; opacity: 0.95;">Before booking, check if your preferred date is available</p>
+            <a href="/venue/availability" class="btn btn-secondary">Check Availability</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" method="post">
+                        <div class="form-group">
+                            <label asp-for="Name">Full Name *</label>
+                            <input asp-for="Name" type="text" required>
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Email">Email Address *</label>
+                            <input asp-for="Email" type="email" required>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Phone">Phone Number</label>
+                            <input asp-for="Phone" type="tel">
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="EventType">Event Type *</label>
+                            <select asp-for="EventType" required>
+                                <option value="">Select event type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="gala">Gala/Fundraiser</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span asp-validation-for="EventType" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="EventDate">Preferred Date</label>
+                            <input asp-for="EventDate" type="date">
+                            <span asp-validation-for="EventDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="GuestCount">Estimated Guest Count</label>
+                            <input asp-for="GuestCount" type="number" min="1" placeholder="e.g., 150">
+                            <span asp-validation-for="GuestCount" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Message">Message *</label>
+                            <textarea asp-for="Message" rows="5" required placeholder="Tell us about your event..."></textarea>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+
+                        @if (Model.SubmitSuccess)
+                        {
+                            <div class="alert alert-success">
+                                Thank you for your inquiry! We'll get back to you soon.
+                            </div>
+                        }
+
+                        <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-container">
+                    <h2>Get in Touch</h2>
+
+                    <div class="contact-info-item">
+                        <h3>📍 Address</h3>
+                        <p>123 Event Street<br>
+                        City, State 12345<br>
+                        United States</p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <h3>📞 Phone</h3>
+                        <p>(555) 123-4567<br>
+                        Mon-Fri: 9:00 AM - 6:00 PM<br>
+                        Sat-Sun: 10:00 AM - 4:00 PM</p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <h3>✉️ Email</h3>
+                        <p>info@@venuename.com<br>
+                        bookings@@venuename.com</p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <h3>🕐 Office Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                        Saturday: 10:00 AM - 4:00 PM<br>
+                        Sunday: By Appointment</p>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">Facebook</a>
+                            <a href="#" class="social-icon">Instagram</a>
+                            <a href="#" class="social-icon">Pinterest</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Location</h2>
+            <div class="map-placeholder">
+                <p>Map goes here<br>(Integrate with Google Maps or your preferred mapping service)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How far in advance should I book?</h3>
+                    <p>We recommend booking 6-12 months in advance for weddings and 3-6 months for other events, especially for peak season dates.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer catering services?</h3>
+                    <p>Yes, we have in-house catering with customizable menus. We also work with select preferred vendors if you have specific requirements.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I schedule a tour?</h3>
+                    <p>Absolutely! Contact us to schedule a private tour of our venue. Tours are available by appointment during business hours.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is included in the rental?</h3>
+                    <p>Rental includes the venue space, tables, chairs, basic linens, audio/visual equipment, and parking. Additional services can be added.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a deposit required?</h3>
+                    <p>Yes, a deposit is required to secure your date. The amount varies based on the event type and date. Details will be provided in your quote.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is your cancellation policy?</h3>
+                    <p>Cancellation policies vary by event type and booking date. Full details are provided in your contract. Please contact us for specific information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Punjab Cultural Center</h3>
+                    <p>Creating memorable experiences since 2020</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/venue/about">About Us</a></li>
+                        <li><a href="/venue/events">Gallery</a></li>
+                        <li><a href="/venue/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>123 Event Street<br>
+                    City, State 12345<br>
+                    Phone: (555) 123-4567<br>
+                    Email: info@@venuename.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Punjab Cultural Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+</body>
+</html>
