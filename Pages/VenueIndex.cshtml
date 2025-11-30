@@ -13,30 +13,33 @@
     <link rel="stylesheet" href="~/css/venue-styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <h1>PCC</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/venue" class="active">Home</a></li>
-                <li><a href="/venue/about">About</a></li>
-                <li><a href="/venue/events">Events & Gallery</a></li>
-                <li><a href="/venue/availability">Check Availability</a></li>
-                <li><a href="/venue/contact">Contact & Booking</a></li>
-            </ul>
-        </div>
-    </nav>
-
+    <partial name="Shared/_VenueNavigation" />
+   
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Your Perfect Event Space</h1>
-            <p>Host unforgettable moments in our premium venue</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+            <p class="hero-subtitle">Punjab Cultural Center</p>
+            <h1>Where Tradition Meets Elegance</h1>
+            <p class="hero-description">Experience the perfect blend of cultural heritage and modern sophistication. Host your most cherished celebrations in Punjab's premier event destination.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Events Hosted</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">500</span>
+                    <span class="stat-label">Guest Capacity</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
                 <a href="/venue/availability" class="btn btn-secondary">Check Availability</a>
-                <a href="/venue/contact" class="btn btn-primary">Book Now</a>
+                <a href="/venue/contact" class="btn btn-primary">Schedule a Tour</a>
             </div>
         </div>
     </section>

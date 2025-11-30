@@ -1,0 +1,244 @@
+@page "/venue/pricing"
+@model PCC.Pages.VenuePricingModel
+@{
+    ViewData["Title"] = "Pricing - PCC";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/venue-styles.css">
+</head>
+<body>
+    <partial name="Shared/_VenueNavigation" />
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Venue Pricing</h1>
+        <p>Flexible options to perfectly fit your event needs and budget</p>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-intro">
+                <h2>Choose Your Perfect Space</h2>
+                <p>Whether you need an intimate gathering or a grand celebration, we have the perfect space for your event. All packages include essential amenities to make your event unforgettable.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Half Venue Package -->
+                <div class="pricing-card">
+                    <div class="pricing-badge">Popular Choice</div>
+                    <div class="pricing-header">
+                        <h3>Half Venue</h3>
+                        <p class="pricing-description">Perfect for intimate celebrations and corporate gatherings</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">2,500</span>
+                        <span class="period">/ event</span>
+                    </div>
+                    <div class="pricing-features">
+                        <h4>What's Included:</h4>
+                        <ul>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Up to 250 guests capacity</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>6-hour event duration</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Professional sound system</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>LED stage lighting</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Tables and chairs setup</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Climate control system</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Complimentary parking (100 spaces)</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Event coordinator assistance</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="/venue/contact?package=half" class="btn btn-secondary">Request Quote</a>
+                    </div>
+                </div>
+
+                <!-- Full Venue Package -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge premium">Best Value</div>
+                    <div class="pricing-header">
+                        <h3>Full Venue</h3>
+                        <p class="pricing-description">The complete experience for grand celebrations and large events</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">4,500</span>
+                        <span class="period">/ event</span>
+                    </div>
+                    <div class="pricing-features">
+                        <h4>Everything in Half Venue, plus:</h4>
+                        <ul>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Up to 500 guests capacity</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>8-hour event duration</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Full ballroom access</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Bridal suite & preparation rooms</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Premium stage lighting & effects</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Enhanced audio system</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Complimentary valet parking (200 spaces)</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Dedicated event coordinator</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Traditional Punjabi décor elements</span>
+                            </li>
+                            <li>
+                                <span class="check">✓</span>
+                                <span>Priority booking for future events</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="/venue/contact?package=full" class="btn btn-primary">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="pricing-additional">
+                <div class="additional-info-card">
+                    <h3>📋 Custom Packages Available</h3>
+                    <p>Need something more specific? We offer customized packages tailored to your unique event requirements. Contact us to discuss your needs.</p>
+                </div>
+                <div class="additional-info-card">
+                    <h3>🍽️ Catering Services</h3>
+                    <p>Professional catering services available upon request. Choose from our preferred vendors or bring your own licensed caterer.</p>
+                </div>
+                <div class="additional-info-card">
+                    <h3>💰 Deposit & Payment</h3>
+                    <p>A 30% deposit is required to secure your booking. Flexible payment plans available for larger events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="pricing-faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What's the difference between Half and Full Venue?</h3>
+                    <p>Half Venue provides access to a designated section accommodating up to 250 guests, while Full Venue includes the entire ballroom for up to 500 guests with additional amenities and extended hours.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I extend the event duration?</h3>
+                    <p>Yes! Additional hours can be added to your booking for an extra fee. Please contact us for hourly extension rates.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is setup and cleanup included?</h3>
+                    <p>Yes, basic setup of tables and chairs is included in both packages. Cleanup after your event is also included.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What about decorations?</h3>
+                    <p>You're welcome to bring your own decorations or work with our preferred vendors. Full Venue includes traditional Punjabi décor elements.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How far in advance should I book?</h3>
+                    <p>We recommend booking 3-6 months in advance for popular dates, especially weekends and during peak wedding season.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's your cancellation policy?</h3>
+                    <p>Cancellations made 90+ days before the event receive a full refund minus processing fees. Contact us for detailed terms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Book Your Event?</h2>
+            <p>Check availability for your preferred date or contact us for a personalized quote</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="/venue/availability" class="btn btn-secondary">Check Availability</a>
+                <a href="/venue/contact" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PCC</h3>
+                    <p>Creating memorable experiences since 2020</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/venue/about">About Us</a></li>
+                        <li><a href="/venue/pricing">Pricing</a></li>
+                        <li><a href="/venue/events">Gallery</a></li>
+                        <li><a href="/venue/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>123 Event Street<br>
+                    City, State 12345<br>
+                    Phone: (555) 123-4567<br>
+                    Email: info@pccvenue.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PCC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
